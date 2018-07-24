@@ -3,7 +3,9 @@
     <div class="cover-inner">
       <div class="cover-contents">
         <h1>素敵なモノと出会う場所</h1>
-        <%= link_to 'モノリストを始める', new_user_path, class: "btn btn-success btn-lg" %>
+        <% unless logged_in? %>
+          <%= link_to 'モノリストを始める', new_user_path, class: "btn btn-success btn-lg" %>
+        <% end %>
       </div>
     </div>
   </div>
