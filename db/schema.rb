@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180725044758) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_ownerships_on_item_id", using: :btree
+    t.index ["user_id", "item_id", "type"], name: "index_ownerships_on_user_id_and_item_id_and_type", unique: true, using: :btree
     t.index ["user_id"], name: "index_ownerships_on_user_id", using: :btree
   end
 

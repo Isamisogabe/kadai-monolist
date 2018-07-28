@@ -7,7 +7,7 @@ class CreateOwnerships < ActiveRecord::Migration[5.0]
 
       t.timestamps
       
-      t.index [:user_id, :item_id, :type], unieque: true
+      t.index [:user_id, :item_id, :type], unique: true
     end
   end
 end
